@@ -250,14 +250,14 @@ static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
         [channel invokeMethod:@"onUrlChanged" arguments:data];
     }
 
-    if (_enableAppScheme ||
-        ([webView.URL.scheme isEqualToString:@"http"] ||
-         [webView.URL.scheme isEqualToString:@"https"] ||
-         [webView.URL.scheme isEqualToString:@"about"])) {
+    // if (_enableAppScheme ||
+    //     ([webView.URL.scheme isEqualToString:@"http"] ||
+    //      [webView.URL.scheme isEqualToString:@"https"] ||
+    //      [webView.URL.scheme isEqualToString:@"about"])) {
+    //     decisionHandler(WKNavigationActionPolicyAllow);
+    // } else {
         decisionHandler(WKNavigationActionPolicyAllow);
-    } else {
-        decisionHandler(WKNavigationActionPolicyCancel);
-    }
+    // }
 }
 
 
